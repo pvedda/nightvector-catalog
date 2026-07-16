@@ -3,6 +3,7 @@
 ## Released Artifact
 
 - File: `nightvector-athyg-full.sqlite`
+- Catalog schema version: `3`
 - SHA-256: `bf2e93aff476dfc99cbb3e2b56ad52d8cc010390cbe9971f1a61624734a8b5a3`
 - Catalog objects: 2,565,053
 - AT-HYG stars: 2,552,164
@@ -41,4 +42,4 @@ Scripts/build-athyg-catalog.py \
 Scripts/validate-catalog.py DerivedCatalogs/nightvector-athyg-full.sqlite
 ```
 
-The app source repository's `ci_scripts/ci_post_clone.sh` downloads this exact release asset, verifies its SHA-256 checksum, and validates its internal catalog metadata before every Release archive.
+The app source repository's `ci_scripts/ci_post_clone.sh` downloads this exact release asset, verifies its SHA-256 checksum, and validates its internal catalog metadata before every Release archive. The app currently accepts production catalog schema versions 3 and 4; this release intentionally remains schema 3 because no complete schema-v4 production artifact has been published yet.

@@ -8,6 +8,10 @@ Each GitHub Release contains:
 - `nightvector-athyg-full.sqlite.sha256`: the SHA-256 checksum for the database.
 - `CATALOG-NOTICES.md`: attribution, licensing, source versions, and build provenance.
 
+The `catalog-v1` production artifact uses catalog schema version 3. NightVector
+supports schema versions 3 and 4, so this release remains compatible while a
+full schema-v4 catalog is prepared.
+
 Download a specific tagged release rather than a mutable `latest` asset. NightVector Xcode Cloud builds verify both the release checksum and the catalog's internal production metadata before embedding it in a Release archive.
 
 ## License
