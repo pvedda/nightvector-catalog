@@ -1,10 +1,10 @@
-# Catalog Notices: catalog-v1
+# Catalog Notices: catalog-v2
 
 ## Released Artifact
 
 - File: `nightvector-athyg-full.sqlite`
-- Catalog schema version: `3`
-- SHA-256: `bf2e93aff476dfc99cbb3e2b56ad52d8cc010390cbe9971f1a61624734a8b5a3`
+- Catalog schema version: `4`
+- SHA-256: `46582bf96e1cec7bc50855114b7e0ab3943cdf48fd994011129ed6d29ff17913`
 - Catalog objects: 2,565,053
 - AT-HYG stars: 2,552,164
 - OpenNGC objects: 12,889
@@ -27,7 +27,7 @@
 
 ## Transformations
 
-NightVector converts the AT-HYG split CSV sources and OpenNGC database CSV into a merged SQLite database. The transformation validates source rows, skips invalid or duplicate records, normalizes fields, creates stable catalog identifiers, adds source attribution and astrometry metadata, and builds search indexes. The generated database is a derivative work licensed under CC BY-SA 4.0.
+NightVector converts the AT-HYG split CSV sources and OpenNGC database CSV into a merged SQLite database. The transformation validates source rows, skips invalid or duplicate records, normalizes fields, imports stellar color indexes, creates stable catalog identifiers, adds source attribution and astrometry metadata, and builds search indexes. The generated database is a derivative work licensed under CC BY-SA 4.0.
 
 ## Reproduction
 
@@ -42,4 +42,4 @@ Scripts/build-athyg-catalog.py \
 Scripts/validate-catalog.py DerivedCatalogs/nightvector-athyg-full.sqlite
 ```
 
-The app source repository's `ci_scripts/ci_post_clone.sh` downloads this exact release asset, verifies its SHA-256 checksum, and validates its internal catalog metadata before every Release archive. The app currently accepts production catalog schema versions 3 and 4; this release intentionally remains schema 3 because no complete schema-v4 production artifact has been published yet.
+The app source repository's `ci_scripts/ci_post_clone.sh` downloads this exact release asset, verifies its SHA-256 checksum, and validates its internal catalog metadata before every Release archive. This complete catalog uses schema 4 and contains 2,429,896 populated stellar color indexes.
